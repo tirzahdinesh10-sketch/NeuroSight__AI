@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeuroSight.AI — MRI Diagnosis</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="brand">neurosight.AI</div>
+        <nav>
+          <a class="active">Upload Scan</a>
+          <a>Scan History</a>
+          <a>Reports</a>
+          <a>Settings</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <section class="left">
+          <h2>Upload MRI Scan</h2>
+          <div id="uploader" class="uploader">
+            <input id="fileInput" type="file" accept="image/*" />
+            <div class="drop-hint">Drag & drop files or <button id="browseBtn">Browse Files</button></div>
+          </div>
+
+          <div class="preview-area">
+            <h3>MRI Scan Preview</h3>
+            <div id="previewBox" class="preview-box">No image</div>
+          </div>
+
+          <div class="diagnosis">
+            <h3>AI Diagnosis</h3>
+            <div id="diagnosisCard" class="card">
+              <div><strong>Tumor Type:</strong> <span id="tumorType">—</span></div>
+              <div><strong>Confidence:</strong> <span id="confidence">—</span></div>
+              <div id="severity" class="severity"> </div>
+              <div id="nextSteps" class="next-steps"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="right">
+          <h3>Model Performance Metrics</h3>
+          <canvas id="metricsChart" height="200"></canvas>
+          <div id="metricsSummary" class="metrics-summary"></div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

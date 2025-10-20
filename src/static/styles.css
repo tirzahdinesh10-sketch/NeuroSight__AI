@@ -1,0 +1,20 @@
+:root{
+  --bg:#f7f9fc; --accent:#1e88e5; --muted:#6b7280; --card:#fff;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Arial;margin:0}
+body{background:var(--bg);color:#111}
+.container{display:flex;height:100vh}
+.sidebar{width:220px;background:#fff;padding:24px;border-right:1px solid #e6edf3}
+.brand{font-weight:700;color:var(--accent);margin-bottom:18px}
+.sidebar nav a{display:block;padding:10px 0;color:var(--muted)}
+.sidebar nav a.active{color:var(--accent);font-weight:600}
+.main{display:flex;flex:1;padding:24px;gap:20px}
+.left{flex:1}
+.right{width:420px}
+.uploader{background:linear-gradient(180deg,#fff,#fbfdff);border:2px dashed #dbeafe;padding:20px;border-radius:8px;text-align:center}
+#fileInput{display:none}
+.preview-box{height:220px;background:linear-gradient(180deg,#f3f6fb,#f7f9fc);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.card{background:var(--card);padding:14px;border-radius:8px;margin-top:12px;border:1px solid #e6edf3}
+.metrics-summary{margin-top:12px}
+.diagnosis .severity{margin-top:8px;color:#374151}
+.next-steps{margin-top:8px;color:#6b7280;font-size:13px}
